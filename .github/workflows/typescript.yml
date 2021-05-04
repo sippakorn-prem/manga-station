@@ -11,7 +11,7 @@ on:
 
 jobs:
   dependencies:
-    name: Dependencies installation
+    name: Dependencies Installation
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
