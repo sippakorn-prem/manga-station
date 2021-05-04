@@ -18,7 +18,7 @@ function Index(props: any) {
 
   return (
     <div>
-      <Button color='secondary' variant='contained' onClick={() => tick(12345789)}>
+      <Button color='secondary' variant='contained' onClick={() => tick('DECREMENT')}>
         Decrement
       </Button>
       <Button color='primary' variant='contained' onClick={() => tick('INCREMENT')}>
