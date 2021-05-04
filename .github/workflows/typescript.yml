@@ -23,6 +23,7 @@ jobs:
           key: ${{ github.sha }}
   type_checking:
     name: Type Checking
+    runs-on: ubuntu-latest
     needs: dependencies
     steps:
       - name: Run type checking
