@@ -5,12 +5,22 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "ts": "tsc",
+    "ts:watch": "tsc --watch"
   },
   "dependencies": {
+    "@material-ui/core": "^4.11.4",
+    "@material-ui/icons": "^4.11.2",
+    "@types/material-ui": "^0.21.8",
     "next": "10.2.0",
+    "next-redux-wrapper": "^6.0.2",
     "react": "17.0.2",
     "react-dom": "17.0.2",
+    "react-redux": "^7.2.4",
+    "redux": "^4.1.0",
+    "redux-devtools-extension": "^2.13.9",
+    "redux-thunk": "^2.3.0",
     "sass": "^1.32.12"
   },
   "devDependencies": {

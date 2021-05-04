@@ -1,37 +1,31 @@
-import { useEffect, useState, useMemo, useCallback } from 'react'
-import styles from '../styles/Home.module.scss'
+import { Button } from '@material-ui/core'
+import { useEffect } from 'react'
+import { useDispatch, useSelector } from 'react-redux'
 
-export default function Home() {
-  const [todo, setTodo] = useState<object[]>([])
-  const [count, setCount] = useState<number>(0)
-  const fnRender = useMemo(() => checkRender(), [])
-  const a: string = fnRender
-  function getNumber(num: number = 12): any {
-    console.log(num)
-    return `${num + 1}}`
-  }
+const selectCount = (state: any) => state.count
 
-  const getNum = useCallback(getNumber, [])
+function Index(props: any) {
+  const dispatch = useDispatch()
+  const count = useSelector(selectCount)
 
-  async function getList() {
-    const res = await fetch('https://jsonplaceholder.typicode.com/todos/').then(res => res.json())
-    console.log(res)
-  }
-
-  function checkRender(): string {
-    console.log('render')
-    return 'render'
+  function tick(type: string) {
+    dispatch({ type })
   }
 
   useEffect(() => {
-    getList()
-  }, [])
+    console.log({ props, count })
+  }, [count])
 
   return (
-    <div className={styles.container}>
-      <button className={styles.btn} onClick={() => setCount(c => c + 1)}>
-        test {getNum(count)}
-      </button>
+    <div>
+      <Button color='secondary' variant='contained' onClick={() => tick('DECREMENT')}>
+        Decrement
+      </Button>
+      <Button color='primary' variant='contained' onClick={() => tick('INCREMENT')}>
+        Increment
+      </Button>
     </div>
   )
 }
+
+export default Index
