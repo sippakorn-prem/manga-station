@@ -23,15 +23,7 @@ jobs:
           key: ${{ github.sha }}
   type_checking:
     name: Type Checking
-    runs-on: ubuntu-latest
     needs: dependencies
     steps:
-      # - uses: actions/cache@v1
-      #   id: restore-dependencies
-      #   with:
-      #     path: '.'
-      #     key: ${{ github.sha }}
-      - name: GitHub Action for npx
-        uses: mikeal/npx@1.0.0
       - name: Run type checking
-        run: npx tsc
+        run: npm run ts
