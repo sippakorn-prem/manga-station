@@ -19,7 +19,7 @@ function Index(props: any) {
   return (
     <div>
       <Button color='secondary' variant='contained' onClick={() => tick('DECREMENT')}>
-        DecrementPlus++++++
+        DecrementPlusKLxHunter
       </Button>
       <Button color='primary' variant='contained' onClick={() => tick('INCREMENT')}>
         Increment
