@@ -10,7 +10,7 @@ function Index(props: any) {
 
   function tick(type: string): string {
     dispatch({ type })
-    return 123
+    return 'klx'
   }
 
   useEffect(() => {
@@ -19,7 +19,7 @@ function Index(props: any) {
 
   return (
     <div>
-      <Button color='secondary' variant='contained' onClick={() => tick(12345)}>
+      <Button color='secondary' variant='contained' onClick={() => tick('DECREMENT')}>
         DecrementPlusKLxHunter
       </Button>
       <Button color='primary' variant='contained' onClick={() => tick('INCREMENT')}>
