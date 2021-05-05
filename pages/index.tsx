@@ -8,8 +8,9 @@ function Index(props: any) {
   const dispatch = useDispatch()
   const count = useSelector(selectCount)
 
-  function tick(type: string) {
+  function tick(type: string): number {
     dispatch({ type })
+    return 123456
   }
 
   useEffect(() => {
